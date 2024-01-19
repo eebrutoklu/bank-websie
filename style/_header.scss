@@ -1,0 +1,73 @@
+.header {
+  width: 100%;
+  top: -3px;
+  background-color: $white;
+  position: fixed;
+  z-index: 1;
+  &__burger {
+    display: none;
+    color: $darkPurple;
+  }
+  nav {
+    display: flex;
+    align-items: center; /* Dikey hizalamayı ortala */
+    justify-content: space-between; /* Başlık ve logoyu iki kenara yerleştir */
+    background-color: $white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  &__logo {
+    img {
+      margin-top: 4px;
+      width: 120px;
+      height: 40px;
+    }
+  }
+
+  &__menu {
+    // width: calc(100% - 50px);
+    // left: 50%;
+    display: flex;
+    align-items: center; /* Dikey hizalamayı ortala */
+    gap: 15px;
+
+    a {
+      position: relative;
+      font-size: $font-sm;
+      color: $grayishPurple;
+      &:not(:last-child) {
+        /* son child hariç özellik atar. */
+        margin-right: 32px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 4px;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        background: linear-gradient(to right, $darkPurple, $lightPurple);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      &:hover {
+        color: $darkPurple;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__menu,
+  .header__cta {
+    display: none;
+  }
+  .header__burger {
+    display: inline-block;
+    font-size: 18px;
+  }
+}

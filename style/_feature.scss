@@ -1,0 +1,54 @@
+.feature {
+  padding: 0 5%;
+}
+.feature {
+  img {
+    width: 120px;
+  }
+  background-color: $white;
+  text-align: center;
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+  &__intro {
+    @include breakpoint-up(large) {
+      width: 50%;
+      margin-bottom: 55px;
+      padding: 0 80px;
+    }
+  }
+  &__grid {
+    @include breakpoint-up(medium) {
+      padding: 10px 80px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    padding-top: 35px;
+    @include breakpoint-up(medium) {
+      flex: 0 0 50%;
+      padding-right: 35px;
+    }
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+  }
+  &__icon {
+    margin-bottom: 20px;
+    @include breakpoint-up(large) {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    font-size: $font-lg;
+    font-weight: 400;
+    color: $darkPurple;
+    margin-bottom: 15px;
+    white-space: nowrap;
+  }
+  &__desc {
+    font-size: $font-sm;
+    line-height: 1.6;
+  }
+}

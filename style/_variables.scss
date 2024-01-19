@@ -1,0 +1,23 @@
+// Colors
+$darkPurple: hsl(272, 26%, 24%);
+$dustyRose: hsl(247, 24%, 40%);
+$lightPurple: hsl(258, 87%, 31%);
+$grayishPurple: hsl(233, 8%, 62%);
+$lightGrayishPurple: hsl(280, 14%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$lineer-grand: linear-gradient(to right, $darkPurple, $lightPurple);
+
+// oppacttysi düşük renk
+// linear-gradient(
+//   to right,
+//   rgba($darkPurple, 0.8),
+//   rgba($lightPurple, 0.8)
+// );
+// Font Sizes
+$font-xs: 0.75rem;
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.2rem;
+$font-xlg: 2rem;
+$font-xxlg: 3rem;
